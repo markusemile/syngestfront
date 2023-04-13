@@ -1,0 +1,45 @@
+
+$height:15vh;
+$width:100vw;
+
+$marginY:2vh;
+$marginX:2vw;
+
+$brandW : 5vw;
+$brandY : 5vh;
+
+$nav-items-height:10vh;
+
+
+nav{
+    width:100%;
+    .navbar{
+        display:flex;   
+        align-items: center;
+        height:$height !important;
+        width:100% !important;
+        .navbar-brand{
+            height : calc($height - $brandY - $marginY);
+            margin : $marginY / 2 $marginX;
+            background-color:red;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .brand{
+               
+            }
+        }
+        .navbar-nav{
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            width:100%;
+            clear: none;
+            height:$nav-items-height;
+            .navbar-item::after{
+                content: "|";
+            }
+        }
+    }
+}

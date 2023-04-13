@@ -1,0 +1,63 @@
+<nav class="nav navbar-inverse">
+    <div class="navbar">
+        <div class="navbar-brand">
+            <div class="brand ">
+                LOGO
+            </div>
+        </div>
+        <div class="navbar-nav">
+            <div class="navbar-item" *ngIf="group!='ADMIN'">
+                <button mat-button>Home</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='ADMIN'">
+                <button mat-button>Dashboard</button>
+            </div>
+            <!-- ADMIN -->
+            <div class="navbar-item" *ngIf="group=='MANAGER'">
+                <button mat-button>Gestion lots</button>
+            </div>
+            <!-- MANAGER -->
+            <div class="navbar-item" *ngIf="group=='MANAGER' || group=='DIRECTOR' || group=='SUPERVISOR'">
+                <button mat-button>Gestion lots</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='MANAGER' || group=='DIRECTOR' || group=='SUPERVISOR'">
+                <button mat-button>Gestion propriétaires</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='MANAGER' || group=='DIRECTOR' || group=='SUPERVISOR'">
+                <button mat-button>Gestion évènements</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='MANAGER' || group=='DIRECTOR' || group=='SUPERVISOR'">
+                <button mat-button>Gestion documents</button>
+            </div>
+            <!-- PROPRIO -->
+            <div class="navbar-item" *ngIf="group=='PROPRIO'">
+                <button mat-button>Gestion propriété</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='PROPRIO'">
+                <button mat-button>Gestion locataire</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='PROPRIO'">
+                <button mat-button>Gestion évènements</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='PROPRIO'">
+                <button mat-button>Gestion documents</button>
+            </div>
+            <!-- LODGER -->
+            <div class="navbar-item" *ngIf="group=='LODGER'">
+                <button mat-button>Gestion bail</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='LODGER'">
+                <button mat-button>Gestion évènements</button>
+            </div>
+            <div class="navbar-item" *ngIf="group=='LODGER'">
+                <button mat-button>Gestion documents</button>
+            </div>           
+        </div>
+        <!-- if login show logout -->
+        <div class="self-end">
+            <div class="navbar-item">
+                <button mat-button>Login</button> 
+            </div>
+        </div>
+    </div>
+</nav>
